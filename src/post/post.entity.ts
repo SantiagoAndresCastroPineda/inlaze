@@ -1,4 +1,4 @@
-import { Prop,Schema } from "@nestjs/mongoose";
+import { Prop,Schema, SchemaFactory } from "@nestjs/mongoose";
 import { HydratedDocument } from "mongoose";
 import { getDefaultAutoSelectFamilyAttemptTimeout } from "net";
 
@@ -29,9 +29,5 @@ export class post{
 
     @Prop()
     userId:string;
-
-
-
-
-
 }
+export const postSchema = SchemaFactory.createForClass(post);
